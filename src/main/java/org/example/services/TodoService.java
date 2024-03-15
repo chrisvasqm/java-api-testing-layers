@@ -2,7 +2,6 @@ package org.example.services;
 
 import io.restassured.response.Response;
 import org.example.Todo;
-import org.example.services.APIClient;
 
 import java.util.List;
 
