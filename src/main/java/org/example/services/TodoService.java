@@ -9,14 +9,14 @@ public class TodoService {
     private final APIClient<Todo> client;
 
     public TodoService() {
-        this.client = new APIClient<>("https://jsonplaceholder.typicode.com", Todo.class);
+        this.client = new APIClient<>("/todos", Todo.class);
     }
 
     public List<Todo> getAll() {
-        return client.getAll("/todos");
+        return client.getAll();
     }
 
     public Response post(Todo todo) {
-        return client.post("/todos", todo);
+        return client.post(todo);
     }
 }
